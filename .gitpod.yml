@@ -4,15 +4,15 @@ tasks:
       clear
       echo "Creating 3GB file"
       dd if=/dev/zero of=3gb-file bs=1024 count=3072000
-      echo "Creating 128MB file"
-      dd if=/dev/zero of=128mb-file--to-delete bs=1024 count=128000
+      echo "Creating 256MB file"
+      dd if=/dev/zero of=256mb-file--to-delete bs=1024 count=256000
       echo "Displaying /workspace size"
-      du -h /workspace
+      du -sh /workspace
       echo "1) /worksapce is larger than 3GB (3.1GB)"
       echo "2) Click on main menu and select 'Gitpod: Share Workspace Snapshot'"
       echo "3) Snapshot is expected to fail :("
-      echo "3) Delete the file '128mb-file--to-delete'"
-      echo "4) Run 'du -h /workspace'"
+      echo "3) Delete the file '256mb-file--to-delete'"
+      echo "4) Run 'du -sh /workspace'"
       echo "5) /workspace is exactly 3GB"
       echo "6) Select again 'Gitpod: Share Workspace Snapshot'"
       echo "7) Snapshot is expected to run successfully"
